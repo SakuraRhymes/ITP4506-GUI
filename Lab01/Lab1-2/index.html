@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="welcome.js"></script>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#button1').click(function () {
+                showWelcome();
+            });
+            $('#button2').dblclick(function () {
+                showGoodBye();
+            });
+            $('#button3').mouseenter(function () {
+                $(this).css('color', "#ff5713");
+            }).mouseleave(function () {
+                $(this).css('color', "#050505");
+            });
+            $('input').focus(function () {
+                $(this).css('background-color', "#25ff1c");
+            }).focusout(function () {
+                $(this).css('background-color', "#ff111d");
+            })
+        });
+    </script>
+</head>
+<body>
+<button id="button1">Button 1</button>
+<button id="button2">Button 2</button>
+<button id="button3">Button 3</button>
+<p>
+    Input 1: <input/>
+    Input 2: <input/>
+</p></body>
+</html>

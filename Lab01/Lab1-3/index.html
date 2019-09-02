@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $(this).css('background-color', "#ff111d");
+            });
+            $('input').focus(function () {
+                $(this).css('background-color', "#25ff1c");
+            }).change(function () {
+                $(this).css('background-color', "#ff111d");
+            }).focusout(function () {
+                $(this).css('background-color', "#1534ff");
+
+            })
+        });
+    </script>
+</head>
+</bod>
+<button>click</button>
+<input type="text" value="Input here">
+</body>
+</html>

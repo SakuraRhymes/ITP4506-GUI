@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            let result = "";
+            let item = $("li");
+            item.each(function (idx, li) {
+                result += "Fount item: " + $(li).text() + "\n";
+            });
+            alert(result);
+        });
+    </script>
+</head>
+<body>
+<ol>
+    <li>This is the first item.</li>
+    <li>This is the second item.</li>
+    <li>This is the third item.</li>
+</ol>
+</body>
+</html>
