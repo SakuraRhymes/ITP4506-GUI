@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        let sum = 0;
+        $(document).ready(function () {
+            $("button").click(function () {
+                alert("Confirmed " + $(this).text());
+            });
+            $("input:checkbox").click(function () {
+                $("input:checkbox:checked").each(function (index, element) {
+                    sum += parseInt($(this).val());
+                });
+                $("button").text("Sum = " + sum);
+                sum = 0;
+            })
+        })
+    </script>
+</head>
+<body>
+<h1>Choose the following items:</h1>
+<div>
+    <input type="checkbox" id="cb1" value="1">One($1)</input><br>
+    <input type="checkbox" id="cb2" value="2">Two($2)</input><br>
+    <input type="checkbox" id="cb3" value="3">Three($3)</input><br><br>
+    <button>Sum = 0</button>
+</div>
+</body>
+</html>

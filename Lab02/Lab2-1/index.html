@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#login").click(function () {
+                $("#welcome").text("Welcome " + $("#username").val());
+                alert("You have logged in successfully, " + $("#username").val());
+            });
+            $("#reset").click(function () {
+                $("#welcome").text("");
+                $("#username").val("");
+            });
+        })
+    </script>
+</head>
+<body>
+<h1>ABC Company Ltd.</h1>
+Username: <input type="text" id="username">
+<br>
+<br>
+<input type="button" name="" id="login" value="Login">
+<input type="button" name="" id="reset" value="Reset">
+<br>
+<br>
+<div id="welcome"></div>
+</body>
+</html>

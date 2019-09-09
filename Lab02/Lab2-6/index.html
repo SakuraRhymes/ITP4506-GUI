@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input:radio").click(function () {
+                $("#some_textarea").text("Product chosen: "+$(this).val());
+            })
+        })
+    </script>
+</head>
+<body>
+<label>Product List </label>
+<br>
+<input type="radio" name="radio" value="Tablet">Tablet<br>
+<input type="radio" name="radio" value="Desktop">Desktop<br>
+<input type="radio" name="radio" value="Notebook">Notebook<br>
+<input type="radio" name="radio" value="Smartphone">Smartphone<br>
+<div id="some_textarea">Product chosen:</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("tr:odd").addClass("striped");
+            $("tr").mouseenter(function () {
+                $(this).addClass("over");
+            }).mouseleave(function () {
+                $(this).removeClass("over");
+            });
+            $("#filter").on("input", function () {
+                let inputValue = $('#filter').val();
+                if (inputValue !== "") {
+                    $("tr").hide();
+                    $("tr:contains(" + inputValue + ")").show();
+                    $("tr:contains('Language')").show();
+                } else {
+                    $("tr").show();
+                }
+            })
+        })
+    </script>
+    <style type="text/css">
+        body, td {
+            font-size: 10pt;
+        }
+
+        table {
+            background-color: black;
+            border: 1px black solid;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 1px outset silver;
+            background-color: maroon;
+            color: white;
+        }
+
+        tr {
+            background-color: white;
+            margin: 1px;
+        }
+
+        tr.striped {
+            background-color: coral;
+        }
+
+        tr.over {
+            background-color: gold;
+        }
+
+        td {
+            padding: 1px 8px;
+        }
+    </style>
+
+</head>
+<body>
+Filter: <input type="text" id="filter">
+<br>
+<br>
+<table>
+    <tr>
+        <th>No</th>
+        <th>Language</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>C#</td>
+        <td>7500</td>
+    </tr>
+    <tr>
+        <td>002</td>
+        <td>Java</td>
+        <td>7000</td>
+    </tr>
+    <tr>
+        <td>003</td>
+        <td>C</td>
+        <td>6000</td>
+    </tr>
+    <tr>
+        <td>004</td>
+        <td>C++</td>
+        <td>6500</td>
+    </tr>
+    <tr>
+        <td>005</td>
+        <td>PHP</td>
+        <td>5000</td>
+    </tr>
+    <tr>
+        <td>006</td>
+        <td>JQuery</td>
+        <td>9000</td>
+    </tr>
+    <tr>
+        <td>007</td>
+        <td>HTML5</td>
+        <td>8000</td>
+    </tr>
+    <tr>
+        <td>008</td>
+        <td>VBasic</td>
+        <td>8000</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $(this).css('background-color', 'red').text("X");
+            }).dblclick(function () {
+                $(this).css('background-color', 'green').text("O");
+            })
+        });
+    </script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<h1>Tic-Tac-Toe</h1>
+<table border="1">
+    <tr>
+        <td>
+            <button>&nbsp</button>
+        </td>
+        <td>
+            <button>&nbsp</button>
+        </td>
+        <td>
+            <button>&nbsp</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button>&nbsp</button>
+        </td>
+        <td>
+            <button>&nbsp</button>
+        </td>
+        <td>
+            <button>&nbsp</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button>&nbsp</button>
+        </td>
+        <td>
+            <button>&nbsp</button>
+        </td>
+        <td>
+            <button>&nbsp</button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
