@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).ready(function () {
+                $("#Go").click(function () {
+                    $("#left").children(":first").appendTo("#right");
+                });
+                $("#Back").click(function () {
+                    $("#right").children(":first").appendTo("#left");
+                });
+                $("#AllGo").click(function () {
+                    $("#left").children().appendTo("#right");
+                });
+                $("#AllBack").click(function () {
+                    $("#right").children().appendTo("#left");
+                });
+            })
+        })
+    </script>
+    <style>
+        div {
+            margin: 10px;
+            padding: 12px;
+            border: 2px solid #666;
+            width: 60px;
+        }
+
+        #tab {
+            width: 450px;
+            overflow: auto;
+        }
+
+        #task {
+            width: 60px;
+            height: 220px;
+            float: left;
+            border: 0px;
+        }
+
+        #left {
+            width: 110px;
+            height: 220px;
+            float: left;
+        }
+
+        #right {
+            width: 110px;
+            height: 220px;
+            float: left;
+        }
+
+        .but {
+            width: 50px;
+            height: 50px
+        }
+
+    </style>
+</head>
+<body>
+<div id="tab">
+    <div id="left">
+        <div style="background-color:blue;"></div>
+        <div style="background-color:green;"></div>
+        <div style="background-color:red;"></div>
+        <div style="background-color:purple;"></div>
+        <div style="background-color:brown;"></div>
+    </div>
+    <div id="task">
+        <button id="Go" class="but">Go</button>
+        <br>
+        <button id="Back" class="but">Back</button>
+        <br>
+        <button id="AllGo" class="but">All Go</button>
+        <br>
+        <button id="AllBack" class="but">All Back</button>
+        <br>
+    </div>
+    <div id="right">
+    </div>
+</div>
+
+</body>
+</html>

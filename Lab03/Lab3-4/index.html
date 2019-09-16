@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#start").children().click(function () {
+                if ($(this).parent().is($("#result"))) {
+                    $(this).appendTo("#start");
+                } else {
+                    $(this).appendTo("#result");
+                }
+            });
+            $("button").click(function () {
+                location.reload();
+            })
+        });
+    </script>
+    <style>
+        div {
+            margin: 10px;
+            padding: 12px;
+            border: 2px solid #666;
+            width: 60px;
+        }
+
+        #result {
+            margin: 10px;
+            padding: 12px;
+            border: 2px solid #555;
+            width: 110px;
+        }
+
+        #start {
+            margin: 10px;
+            padding: 12px;
+            border: 2px solid #555;
+            width: 110px;
+        }
+    </style>
+</head>
+<body>
+<p>Click on any color blocks you like:</p>
+<div id="result">Shopping Cart</div>
+<div id="start">Choose items
+    <div style="background-color:blue"></div>
+    <div style="background-color:green"></div>
+    <div style="background-color:red"></div>
+    <div style="background-color:purple"></div>
+    <div style="background-color:brown"></div>
+</div>
+<hr>
+
+<button>Reset</button>
+</body>
+</html>

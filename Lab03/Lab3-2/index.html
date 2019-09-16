@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("ul").hide();
+            $("#btnApple").click(function () {
+                $("ul").hide();
+                $(".apple").show().removeClass("selected_red selected_blue selected_green").addClass("selected_red");
+            });
+            $("#btnSamsung").click(function () {
+                $("ul").hide();
+                $(".galaxy").show().removeClass("selected_red selected_blue selected_green").addClass("selected_blue");
+            });
+            $("#btnAll").click(function () {
+                $("ul").show().removeClass("selected_red selected_blue selected_green").addClass("selected_green");
+            });
+            $("#btnClear").click(function () {
+                $("ul").hide().removeClass("selected_red selected_blue selected_green");
+            });
+        })
+    </script>
+    <style>
+        .selected_red {
+            color: red;
+        }
+
+        .selected_blue {
+            color: blue;
+        }
+
+        .selected_green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="Apple" id="btnApple">
+<input type="button" value="Samsung" id="btnSamsung">
+<input type="button" value="All" id="btnAll">
+<input type="button" value="Clear" id="btnClear">
+<ul class="galaxy">
+    <li>Galaxy Tab</li>
+    <li>Galaxy Note</li>
+    <li>Galaxy S3</li>
+</ul>
+<ul class="apple">
+    <li>iPhone</li>
+    <li>iPad</li>
+    <li>iPod</li>
+</ul>
+</body>
+</html>

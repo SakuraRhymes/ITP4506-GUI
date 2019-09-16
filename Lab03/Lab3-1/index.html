@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".red").children().addClass("selected_red");
+            $(".blue>li").siblings().addClass("selected_blue");
+        })
+    </script>
+    <style>
+        .selected_red {
+            color: red;
+        }
+
+        .selected_blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul class="red">
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+    </ul>
+    <ul class="blue">
+        <li>list item 4</li>
+        <li>list item 5</li>
+        <li>list item 6</li>
+    </ul>
+</div>
+</body>
+</html>

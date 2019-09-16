@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnAPL").click(function () {
+                $("#products").append("<div>" + $("option:selected").val() + "</div>");
+            });
+            $("#btnAPT").click(function () {
+                $("#products").prepend("<div>" + $("option:selected").val() + "</div>");
+            });
+            $("#btnClear").click(function () {
+                location.reload();
+            });
+        });
+    </script>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #container{
+            width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #products {
+            border: 1px solid;
+            min-height: 30px;
+            width: 200px;
+            padding: 10px;
+            background-color: #2AFFAA;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<input type="button" value="Product append to Last" id="btnAPL">
+<select id="product">
+    <option value="white">Choose product</option>
+    <option value="Desktop">Desktop</option>
+    <option value="Notebook">Notebook</option>
+    <option value="iPad">iPad</option>
+    <option value="iPhone">iPhone</option>
+    <option value="Tablet">Tablet</option>
+</select>
+<input type="button" value="Product append to Top" id="btnAPT">
+<input type="button" value="Clear All" id="btnClear">
+<br><br>
+<div id="container">
+    <div> Append Product Below:</div>
+    <br>
+    <div id="products"></div>
+</div>
+</body>
+</html>
