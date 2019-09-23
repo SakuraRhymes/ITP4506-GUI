@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnLoad").click(function () {
+                $.getJSON("record.json", function (data) {
+                    let record = `Stud_ID\tName\tLastName\tAge\tSex<br>`;
+                    $.each(data, function (index, value) {
+                        record += `${value.ID}\t${value.Name}\t${value.LastName}\t\t${value.Age}\t${value.Sex}<br>`;
+                    })
+                    $("#record").append(record);
+                })
+            })
+        })
+    </script>
+    <style>
+        #record {
+            display: inline-block;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Click on the button to load record:</h2>
+    <pre><div id="record"></div></pre>
+    <br>
+    <input type="button" value="Load Data" id="btnLoad">
+</body>
+
+</html>
