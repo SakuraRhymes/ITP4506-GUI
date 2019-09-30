@@ -24,6 +24,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>backgroundcolor</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -165,7 +170,7 @@
       <workItem from="1567403265661" duration="5046000" />
       <workItem from="1568007410062" duration="5516000" />
       <workItem from="1569215968197" duration="1052000" />
-      <workItem from="1569819780861" duration="7511000" />
+      <workItem from="1569819780861" duration="7555000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1567408555887</created>
@@ -178,7 +183,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19125000" />
+    <option name="totallyTimeSpent" value="19169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
