@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        let toggle = false;
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                if (!toggle) {
+                    $("#box").animate({
+                        height: 500,
+                        width: 500
+                    }, 2000);
+                    toggle = true;
+                } else {
+                    $("#box").animate({
+                        height: 0,
+                        width: 0
+                    }, 2000);
+                    toggle = false;
+                }
+            })
+        });
+    </script>
+    <style>
+        #btn {
+            margin: auto;
+            width: 200px;
+            display: block;
+        }
+
+        #box {
+            margin: auto;
+            width: 0px;
+            height: 0px;
+            background-color: #2AFFAA;
+            overflow: hidden;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="FirstjQueryDemo" id="btn">
+<div id="box">
+    <h3>Hello World!</h3>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#myimg1").animate({
+                    top: `-=80`
+                },1000);
+                $("#myimg2").animate({
+                    top: `-=80`,
+                    opacity: 0
+                },1000);
+            });
+        });
+    </script>
+    <style>
+        #notthatdiv {
+            background: green;
+            left: 10px;
+            top: 130px;
+            height: 70px;
+            width: 100px;
+            position: absolute;
+        }
+
+        #myimg1 {
+            width: 100px;
+            height: 80px;
+            left: 10px;
+            top: 200px;
+            position: absolute
+        }
+
+        #myimg2 {
+            width: 100px;
+            height: 80px;
+            left: 10px;
+            top: 200px;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+<button>Start Animation</button>
+<p>Moving the square! </p>
+<div id="notthatdiv">
+</div>
+<div><img id="myimg1" src="../img/jquery-logo.jpg" alt="Sample image"/>
+</div>
+<div><img id="myimg2" src="../img/logo_vtc.jpg" alt="Sample image"/>
+</div>
+
+</body>
+</html>

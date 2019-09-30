@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            let result = "";
+            $.each($("li:odd"), function (index, item) {
+                result += $(item).text() + " ";
+            });
+            result+='\n';
+            $.each($("li:even"), function (index, item) {
+                result += $(item).text() + " ";
+            });
+            alert(result);
+        });
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<ul id="list">
+    <li>List Item 1</li>
+    <li>List Item 2</li>
+    <li>List Item 3</li>
+    <li>List Item 4</li>
+    <li>List Item 5</li>
+</ul>
+</body>
+</html>

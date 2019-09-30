@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnBGcolor").click(function () {
+                $("#text_area").css("background-color", $("#bg_color").val());
+            });
+            $("#btnTEXTcolor").click(function () {
+                $("h3").css("color", $("#text_color").val());
+            });
+        });
+    </script>
+    <style>
+        #text_area {
+            height: 500px;
+            border: 1px black solid;
+            margin: 10px;
+            text-align: center;
+        }
+        #input{
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="text_area">
+    <h3>Hello World</h3>
+</div>
+<div id="input">
+    <select name="" id="bg_color">
+        <option value="Choose Color">Choose Color</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+    </select>
+    <input type="button" value="Change Background Color" id="btnBGcolor">
+    <br><br><br>
+    <select name="" id="text_color">
+        <option value="Choose Color">Choose Color</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+    </select>
+    <input type="button" value="Change Text Color" id="btnTEXTcolor">
+</div>
+</body>
+</html>

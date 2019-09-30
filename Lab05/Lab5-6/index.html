@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="../jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnMoving").click(function () {
+                $("div").animate({
+                    left: "+=500",
+                    top: "+=500",
+                    backgroundColor: "red"
+                },1000).animate({
+                    left: "-=500",
+                    top: "-=500",
+                    backgroundColor: "green"
+                },1000, function () {
+                    alert("Finished");
+                })
+            });
+            $("#btnShake").click(function () {
+                $("div").effect("shake", {distance: 10}, 2000);
+            });
+            $("#btnFold").click(function () {
+                $("div").effect("fold", {distance: 10}, 2000);
+            });
+            $("#btnExplode").click(function () {
+                $("div").effect("explode", {distance: 10}, 2000);
+            });
+            $("div").click(function () {
+                $("input").css("color", "red");
+            })
+        });
+    </script>
+    <style>
+        div {
+            background: green;
+            left: 10px;
+            top: 100px;
+            height: 100px;
+            width: 100px;
+            position: absolute
+        }
+    </style>
+</head>
+<body>
+<input type="button" id="btnMoving" value="Moving">
+<input type="button" id="btnShake" value="Shake">
+<input type="button" id="btnFold" value="Fold">
+<input type="button" id="btnExplode" value="Explode">
+
+<p>Moving the square!</p>
+<br>
+<div>
+
+</div>
+</body>
+</html>

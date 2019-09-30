@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                let step = 100;
+                $("img").animate({
+                    left: `+=200`
+                }, 1000);
+                $("#img1").animate({
+                    top: "130px",
+                    left: "10px"
+                });
+                $("#img2").animate({
+                    top: "130px",
+                    left: "60px"
+                });
+                $("#img3").animate({
+                    top: "180px",
+                    left: "10px"
+                });
+                $("#img4").animate({
+                    top: "180px",
+                    left: "60px"
+                });
+            });
+        });
+    </script>
+    <style>
+        #notthatdiv {
+            background: green;
+            left: 10px;
+            top: 130px;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+        }
+
+        img {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+        }
+
+        #img1 {
+            top: 230px;
+            left: 10px;
+        }
+
+        #img2 {
+            top: 280px;
+            left: 10px;
+        }
+
+        #img3 {
+            top: 330px;
+            left: 10px;
+        }
+
+        #img4 {
+            top: 380px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+<button>Start Animation</button>
+<p>Moving the square! </p>
+<div id="notthatdiv">
+</div>
+<img src="../img/jquery-logo.jpg" alt="" id="img1">
+<img src="../img/jquery-logo.jpg" alt="" id="img2">
+<img src="../img/jquery-logo.jpg" alt="" id="img3">
+<img src="../img/jquery-logo.jpg" alt="" id="img4">
+
+
+</body>
+</html>

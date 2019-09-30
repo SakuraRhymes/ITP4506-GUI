@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").animate({
+                    left: "+=1000px",
+                    opacity: "0.3"
+                }, 2000).animate({
+                    height: "50px",
+                    width: "50px",
+                    left: "-=1000px",
+                    opacity: "1"
+                }, 3000)
+            })
+        });
+    </script>
+    <style>
+        div {
+            background: green;
+            left: 10px;
+            top: 100px;
+            height: 100px;
+            width: 100px;
+            position: absolute
+        }
+    </style>
+</head>
+<body>
+<button>Start Animation</button>
+<p>Moving the square!</p>
+<div>
+
+</div>
+</body>
+</html>

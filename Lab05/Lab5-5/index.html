@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                let step = $("#step").val();
+                $("div").animate({
+                    left: `+=${step}`
+                }, 1000).animate({
+                    top: `+=${step}`
+                }, 1000).animate({
+                    left: `-=${step}`
+                }, 1000).animate({
+                    top: `-=${step}`
+                }, 1000, function () {
+                    alert("Completed");
+                })
+            });
+        });
+    </script>
+    <style>
+        div {
+            background: green;
+            left: 10px;
+            top: 130px;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<button>Start Animation</button>
+<p>Moving the square! </p>
+<p>Step:<input id="step" type=text value=""/></p>
+<div>
+</div>
+</body>
+</html>
