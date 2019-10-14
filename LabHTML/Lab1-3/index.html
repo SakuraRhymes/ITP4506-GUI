@@ -1,0 +1,56 @@
+<html>
+<body>
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid black;background-color: yellow;">
+    Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    var x = 200,
+        y = 0,
+        // Radii of the white glow.
+        innerRadius = 5,
+        outerRadius = 70,
+        // Radius of the entire circle.
+        radius = 200;
+
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+    var gradient = ctx.createRadialGradient(x, y, innerRadius, x, y, outerRadius);
+    gradient.addColorStop(0, 'red');
+    gradient.addColorStop(1, 'red');
+
+    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+
+    ctx.fillStyle = gradient;
+    ctx.fill();
+
+    y=400;
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+    var gradient = ctx.createRadialGradient(x, y, innerRadius, x, y, outerRadius);
+    gradient.addColorStop(0, 'red');
+    gradient.addColorStop(1, 'red');
+
+    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+
+    ctx.fillStyle = gradient;
+    ctx.fill();
+
+    x=200;
+    y=200;
+    radius=100;
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+    var gradient = ctx.createRadialGradient(x, y, innerRadius, x, y, outerRadius);
+    gradient.addColorStop(0, 'green');
+    gradient.addColorStop(1, 'green');
+
+    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+
+    ctx.fillStyle = gradient;
+    ctx.fill();
+</script>
+</body>
+</html>
