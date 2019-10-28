@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#type-kg").on("select input", function () {
+                $("#yellow-div-lb").hide();
+                $("#yellow-div-kg").show();
+            });
+            $("#type-lb").on("select input", function () {
+                $("#yellow-div-kg").hide();
+                $("#yellow-div-lb").show();
+            });
+            $("#weight-kg, #height-kg").on("input change", function () {
+                let weight = parseInt($("#weight-kg").val());
+                let height = (parseInt($("#height-kg").val())) / 100;
+                let bmi = weight / (height * height);
+                $("#bmi-kg").text(bmi);
+            });
+            $("#weight-lb, #height-lb").on("input change", function () {
+                let weight = (parseInt($("#weight-lb").val())) / 2.205;
+                let height = (parseInt($("#height-lb").val())) / 100;
+                let bmi = weight / (height * height);
+                $("#bmi-lb").text(bmi);
+            });
+        });
+    </script>
+    <style>
+        #green-div {
+            background-color: green;
+            padding: 10px;
+        }
+
+        #yellow-div-kg, #yellow-div-lb {
+            display: none;
+            background-color: yellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>BMI Calculator</h1>
+<form action="">
+    <div id="green-div">
+        <input type="radio" name="type" id="type-kg"> kg
+        <br>
+        <input type="radio" name="type" id="type-lb"> lb
+    </div>
+    <div id="yellow-div-kg">
+        Weight = <input type="number" id="weight-kg">kg
+        <br>
+        Height = <input type="number" id="height-kg">cm
+        <br>
+        BMI = <span id="bmi-kg">0</span>
+    </div>
+    <div id="yellow-div-lb">
+        Weight = <input type="number" id="weight-lb">lb
+        <br>
+        Height = <input type="number" id="height-lb">cm
+        <br>
+        BMI = <span id="bmi-lb">0</span>
+    </div>
+</form>
+</body>
+</html>

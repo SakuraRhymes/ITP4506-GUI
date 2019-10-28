@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#product-value").on("change input",function () {
+                $("#product-bar").val($(this).val());
+            });
+
+            $("#service-value").on("change input",function () {
+                $("#service-bar").val($(this).val());
+            });
+        })
+    </script>
+</head>
+<body>
+<h1>User Survey</h1>
+<form action="">
+    Name: <input type="text">
+    <br>
+    <br>
+    <input type="checkbox"> I'm a member
+    <br>
+    <br>
+    Password <input type="password">
+    <br>
+    <br>
+    What's your favourite products?
+    <input list="productlist" type="text" id="" name="" />
+    <datalist id="productlist">
+        <option label="Mobile Phone" value="Mobile"></option>
+        <option label="Desktop (PC)" value="PC"></option>
+        <option label="" value="Notebook"></option>
+        <option label="" value="Tablet"></option>
+    </datalist>
+    <br>
+    <br>
+    1 <input type="range" max="50" min="1" value="25" id="product-value"> 50
+    <br>
+    <br>
+    Your score on product :
+    <progress max="50" value="25" id="product-bar"></progress>
+    <br>
+    <br>
+    <input type="number" min="0" max="100" value="50" id="service-value">
+    <br>
+    <br>
+    Your score on service :
+    <meter value="50" min="0" max="100" low="40" high="75" optimum="65" id="service-bar"></meter>
+    <br>
+    <br>
+    <input type="submit"><input type="reset">
+</form>
+</body>
+</html>
