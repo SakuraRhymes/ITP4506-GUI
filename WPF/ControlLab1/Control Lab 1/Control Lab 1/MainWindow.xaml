@@ -1,0 +1,34 @@
+﻿<Window x:Class="Control_Lab_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Control_Lab_1"
+        mc:Ignorable="d"
+        Title="E-commerce Online Order Form" Height="750" Width="700" Initialized="Window_Initialized">
+    <Grid>
+        <GroupBox Header="" HorizontalAlignment="Left" Height="164" Margin="10,41,0,0" VerticalAlignment="Top" Width="582"/>
+        <GroupBox Header="" HorizontalAlignment="Left" Height="124" Margin="11,362,0,0" VerticalAlignment="Top" Width="581"/>
+        <GroupBox Header="" HorizontalAlignment="Left" Height="121" Margin="10,223,0,0" VerticalAlignment="Top" Width="582"/>
+        <Label Content="Product Code" HorizontalAlignment="Left" Margin="35,102,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="productCode" HorizontalAlignment="Left" Margin="35,143,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ProductCode_SelectionChanged"/>
+        <Label Content="Proudct Name" HorizontalAlignment="Left" Margin="204,105,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="proudctName" HorizontalAlignment="Left" Height="23" Margin="204,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="Unit Price" HorizontalAlignment="Left" Margin="35,258,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="unitPrice" HorizontalAlignment="Left" Height="23" Margin="35,297,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="Order Quantity" HorizontalAlignment="Left" Margin="204,261,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="orderQty" HorizontalAlignment="Left" Height="23" Margin="204,300,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120" KeyDown="OrderQty_KeyDown" KeyUp="OrderQty_KeyUp_1" DataContextChanged="OrderQty_DataContextChanged"/>
+        <Image x:Name="productImage" HorizontalAlignment="Left" Height="100" Margin="381,94,0,0" VerticalAlignment="Top" Width="100" Source="/image/red.jpg"/>
+        <Label Content="Product Image" HorizontalAlignment="Left" Margin="381,54,0,0" VerticalAlignment="Top"/>
+        <Label Content="Total Price" HorizontalAlignment="Left" Margin="381,261,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="totalPrice" HorizontalAlignment="Left" Height="23" Margin="381,300,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label Content="Free Delivery" HorizontalAlignment="Left" Margin="211,401,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="free" Content="Yes" HorizontalAlignment="Left" Margin="211,442,0,0" VerticalAlignment="Top"/>
+        <Label Content="Payment" HorizontalAlignment="Left" Margin="42,402,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="cash" Content="Cash" HorizontalAlignment="Left" Margin="43,443,0,0" VerticalAlignment="Top" GroupName="payment" IsChecked="True"/>
+        <RadioButton x:Name="visa" Content="VISA" HorizontalAlignment="Left" Margin="116,443,0,0" VerticalAlignment="Top" GroupName="payment"/>
+        <Button Content="Order" HorizontalAlignment="Left" Margin="399,443,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="399,401,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Image HorizontalAlignment="Left" Height="52" Margin="23,19,0,0" VerticalAlignment="Top" Width="49" Source="/image/taobao-android.png"/>
+    </Grid>
+</Window>

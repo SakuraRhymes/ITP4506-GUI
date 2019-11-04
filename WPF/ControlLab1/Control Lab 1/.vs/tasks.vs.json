@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-blue",
+      "appliesTo": "Control Lab 1/image/blue.jpg",
+      "type": "launch"
+    }
+  ]
+}
